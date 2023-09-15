@@ -2,7 +2,7 @@
 
 const HOST = "localhost"; 
 const USER = "root";
-const PASSWORD = "LegoBatman2*";
+const PASSWORD = "123";
 const DATABASE = "db_contato";
 
 $conexao = mysqli_connect(HOST, USER, PASSWORD, DATABASE);
