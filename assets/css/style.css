@@ -1,0 +1,67 @@
+header{
+    background-color: #068ED0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+article{
+    flex: 1;
+}
+
+main{
+    margin: 3%;
+    
+}
+
+label{
+    font-weight: bold;
+    color: #696969;
+}
+
+.form-check-label{
+    font-weight: 600;
+    color: #696969
+}
+
+.form-control{
+    border: none;
+    border-bottom: 1px solid #C3C3C3;
+}
+
+.form-control:focus{
+    border-color: #068ED0;
+    box-shadow: none;
+}
+
+.form-group label {
+    transition: all 0.2s ease-in-out;
+}
+
+.form-group:focus-within label{
+    color: #068ED0;
+}
+
+.thTitulo{
+    background-color: #068ED0 !important;
+    color: white !important;
+}
+
+table{
+    padding: 500px;
+}
+
+.dadosContato{
+    font-weight: 100;
+}
+
+footer{
+    background-color: #068ED0;
+}
+
+#logoRodape{
+    width: 100px;
+}
