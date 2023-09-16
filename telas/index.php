@@ -100,45 +100,48 @@ $resultado = mysqli_query($conexao, $sql);
         </form>
 
         <hr>
+        <div class="table-responsive">
 
-        <table class="table shadow-sm mt-5">
+            <table class="table shadow-sm mt-5">
 
-            <thead>
-                <tr>
-                    <th class="thTitulo text-center" scope="col">Nome</th>
-                    <th class="thTitulo text-center" scope="col">Data de nascimento</th>
-                    <th class="thTitulo text-center" scope="col">E-mail</th>
-                    <th class="thTitulo text-center" scope="col">Celular para contato</th>
-                    <th class="thTitulo text-center" scope="col">Ações</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <?php
-
-                while ($contato = mysqli_fetch_array($resultado)) {
-
-                ?>
+                <thead>
                     <tr>
-                        <th class="text-center dadosContato"><?php echo $contato["nome"] ?></th>
-                        <th class="text-center dadosContato"><?php echo date('d/m/Y', strtotime($contato['data_nascimento'])) ?></th>
-                        <th class="text-center dadosContato"><?php echo $contato["email"] ?></th>
-                        <th class="text-center dadosContato"><?php echo $contato["celular_contato"] ?></th>
-                        <th class="text-center dadosContato">
-                            <a href="../telas/editarContato.php?id_contato=<?php echo $contato['id_contato'] ?>" class="text-decoration-none">
-                                <img src="../assets/editar.png" alt="">
-                            </a>
-
-                            <a href="../acoes/acoes.php?id_contato=<?php echo $contato['id_contato'] . '&acao=deletar' ?>" class="text-decoration-none deletarContato">
-                                <img src="../assets/excluir.png" alt="">
-                            </a>
-                        </th>
+                        <th class="thTitulo text-center" scope="col">Nome</th>
+                        <th class="thTitulo text-center" scope="col">Data de nascimento</th>
+                        <th class="thTitulo text-center" scope="col">E-mail</th>
+                        <th class="thTitulo text-center" scope="col">Celular para contato</th>
+                        <th class="thTitulo text-center" scope="col">Ações</th>
                     </tr>
+                </thead>
 
-                <?php } ?>
-            </tbody>
+                <tbody>
+                    <?php
 
-        </table>
+                    while ($contato = mysqli_fetch_array($resultado)) {
+
+                    ?>
+                        <tr>
+                            <th class="text-center dadosContato"><?php echo $contato["nome"] ?></th>
+                            <th class="text-center dadosContato"><?php echo date('d/m/Y', strtotime($contato['data_nascimento'])) ?></th>
+                            <th class="text-center dadosContato"><?php echo $contato["email"] ?></th>
+                            <th class="text-center dadosContato"><?php echo $contato["celular_contato"] ?></th>
+                            <th class="text-center dadosContato">
+                                <a href="../telas/editarContato.php?id_contato=<?php echo $contato['id_contato'] ?>" class="text-decoration-none">
+                                    <img src="../assets/editar.png" alt="">
+                                </a>
+
+                                <a href="../acoes/acoes.php?id_contato=<?php echo $contato['id_contato'] . '&acao=deletar' ?>" class="text-decoration-none deletarContato">
+                                    <img src="../assets/excluir.png" alt="">
+                                </a>
+                            </th>
+                        </tr>
+
+                    <?php } ?>
+                </tbody>
+
+            </table>
+            
+        </div>
 
     </main>
 
